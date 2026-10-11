@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/estilos.css">
+    <title>Página para comprobación de fallos</title>
+</head>
+<body>
+    <header>
+        <h1>Pagina de fallos simulados</h1>
+        <!-- Barra de navegación para otras páginas -->
+        <nav>
+            <ul>
+                <li>
+                    <a href="/pages/index.html">Búsqueda de monstruo</a>
+                </li>
+                <li>
+                    <a href="/pages/listaCompleta.html">Lista de monstruos</a>
+                </li>
+                <li>
+                    <a href="/pages/busquedaTitulo.html">Buscar monstruo por título</a>
+                </li>
+                <li>
+                    <a href="">Ranking de popularidad</a>
+                </li>
+                <li>
+                    <a href="">Quiz de tema</a>
+                </li>
+                <li>
+                    <a href="">Página de favoritos</a>
+                </li>
+                <li>
+                    <a href="/pages/fallos.html">Botones de fallo</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+
+
+
+    <main>
+        <div class="tituloPagina-container">
+            <h2>Demostración de errores</h2>
+        </div>
+        <div class="mensaje-container">
+                <p id="mensaje"></p>
+        </div>
+
+        <div>
+            <h3>Errores de Conexión y de Datos</h3>
+        </div>
+        <div>
+            <div>
+                <button id="btnFalloApi">
+                    Api no disponible
+                </button>
+            </div>
+            <div>
+                <button id="btnFalloUrl">
+                    URL incorrecta
+                </button>
+            </div>
+            <div>
+                <button id="btnFalloHttp">
+                    Respuesta HTTP no exitosa
+                </button>
+            </div>
+            <div>
+                <button id="btnFalloRegistro">
+                    Registro inexistente
+                </button>
+            </div>
+            <div>
+                <button id="btnFalloJson">
+                    JSON inválido
+                </button>
+            </div>
+        </div>
+
+
+        <div>
+            <h3>Errores al guardar y eliminar</h3>
+        </div>
+        <div>
+            <div>
+                <button id="btnFalloGuardar">
+                    Error al guardar
+                </button>
+            </div>
+            <div>
+                <button id="btnFalloEliminar">
+                    Error al eliminar
+                </button>
+            </div>
+        </div>
+
+
+        <div>
+            <h3>Formulario incompleto y busqueda sin resultados</h3>
+        </div>
+        <div>
+            <form id="formBusquedaMosntruo">
+                <input type="text" id="nombreMonstruoBusqueda">
+                <button type="submit">
+                    Buscar
+                </button>
+            </form>
+        </div>
+
+
+        <div id="tarjetasMonstruosContainer">
+
+        </div>
+    </main>
+
+    <script src="/javascript/script.js"></script>
+</body>
+</html>

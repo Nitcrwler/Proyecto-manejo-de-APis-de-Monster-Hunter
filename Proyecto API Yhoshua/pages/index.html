@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/estilos.css">
+    <title>Proyecto API Monster Hunter</title>
+</head>
+<body>
+    <!-- TODO: -->
+    <!-- Consulta de monstruo mediante el nombre ( X ) --> 
+    <!-- Mostrar todos los monstruos con 1 botón ( X ) -->
+    <!-- Seleccionar el videojuego y mostrar todos los que aparecen en él ( X ) -->
+    <!-- Mostrar el ranking de popularidad () -->
+    <!-- Quiz de imagen de monstruos( 4 de seleccion) () -->
+    <!-- Página de favoritos () -->
+    <!-- Seccion con botones de fallo () -->
+    <header>
+        <h1>Búsqueda de Monstruo</h1>
+        <!-- Barra de navegación para otras páginas -->
+        <nav>
+            <ul>
+                <li>
+                    <a href="/pages/index.html">Búsqueda de monstruo</a>
+                </li>
+                <li>
+                    <a href="/pages/listaCompleta.html">Lista de monstruos</a>
+                </li>
+                <li>
+                    <a href="/pages/busquedaTitulo.html">Buscar monstruo por título</a>
+                </li>
+                <li>
+                    <a href="">Ranking de popularidad</a>
+                </li>
+                <li>
+                    <a href="">Quiz de tema</a>
+                </li>
+                <li>
+                    <a href="">Página de favoritos</a>
+                </li>
+                <li>
+                    <a href="/pages/fallos.html">Botones de fallo</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Seccion donde se ingresa el nombre a buscar -->
+        <section class="seccionBusquedaNombre">
+            <div class="tituloPagina-container">
+                <h2 class="tituloPagina">Ingrese el nombre del monstruo</h2>
+            </div>
+
+            <div class="formBusquedaMonstruo-container">
+                <form id="formBusquedaMosntruo">
+                    <input type="text" id="nombreMonstruoBusqueda">
+                    <button type="submit" id="btnBuscarMonstruoNombre">
+                        Buscar
+                    </button>
+                </form>
+            </div>
+            <div class="mensaje-container">
+                <p id="mensaje"></p>
+            </div>
+            <div class="btnBuscarMonstruoNombreContainer">
+                
+            </div>
+        </section>
+
+        <!-- Seccion donde aparecerá la tarjeta del monstruo encontrado -->
+        <section class="seccionMostrarMonstruo">
+            <div id="tarjetasMonstruosContainer">
+
+            </div>
+        </section>
+    </main>
+
+
+    <footer>
+        <section>
+            <div>
+                <!-- Derechos de autor / Cosas utilizadas -->
+            </div>
+        </section>
+    </footer>
+
+
+    <script src="/javascript/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/estilos.css">
+    <title>Busqueda por título de aparición</title>
+</head>
+<body>
+    <header>
+        <h1>Búsqueda por título de aparición</h1>
+        <!-- Barra de navegación para otras páginas -->
+        <nav>
+            <ul>
+                <li>
+                    <a href="/pages/index.html">Búsqueda de monstruo</a>
+                </li>
+                <li>
+                    <a href="/pages/listaCompleta.html">Lista de monstruos</a>
+                </li>
+                <li>
+                    <a href="/pages/busquedaTitulo.html">Buscar monstruo por título</a>
+                </li>
+                <li>
+                    <a href="">Ranking de popularidad</a>
+                </li>
+                <li>
+                    <a href="">Quiz de tema</a>
+                </li>
+                <li>
+                    <a href="">Página de favoritos</a>
+                </li>
+                <li>
+                    <a href="/pages/fallos.html">Botones de fallo</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <main>
+        <div>
+            <div class="tituloPagina-container">
+                <h2 class="tituloPagina">Busqueda de monstruos por título</h2>
+            </div>
+            <div>
+                <select name="Seleccion por titulo" id="seleccionTitulo">
+                    <option value="" disabled selected>Selecciona el título</option>
+                    <option value="MH">Monster Hunter</option>
+                    <option value="MHG">Monster Hunter G</option>
+                    <option value="MHP">Monster Hunter Portable</option>
+                    <option value="MH2">Monster Hunter 2</option>
+                    <option value="P2nd">Monster Hunter Freedom 2/Portable 2nd</option>
+                    <option value="P2G">Monster Hunter Freedom Unite/Portable 2nd G</option>
+                    <option value="P3rd">Monster Hunter Portable 3rd</option>
+                    <option value="MH3">Monster Hunter 3/Tri</option>
+                    <option value="MH3G">Monster Hunter 3 Ultimate</option>
+                    <option value="MH4">Monster Hunter 4</option>
+                    <option value="MH4G">Monster Hunter 4 Ultimate</option>
+                    <option value="MHX">Monster Hunter X/Generations</option>
+                    <option value="MHXX">Monster Hunter XX/Generations Ultimate</option>
+                    <option value="MHW">Monster Hunter World</option>
+                    <option value="MHWI">Monster Hunter World Iceborne</option>
+                    <option value="MHR">Monster Hunter Rise</option>
+                    <option value="MHRS">Monster Hunter Rise Sunbreak</option>
+                </select>
+            </div>
+            <div class="mensaje-container">
+                <p id="mensaje"></p>
+            </div>
+            <div id="tarjetasMonstruosContainer">
+
+            </div>
+        </div>
+        
+    </main>
+
+
+
+    <script src="/javascript/script.js"></script>
+</body>
+</html>
