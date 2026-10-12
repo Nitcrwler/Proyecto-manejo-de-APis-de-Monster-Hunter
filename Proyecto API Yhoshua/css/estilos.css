@@ -1,0 +1,236 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body{
+    margin: auto;
+    width: 95%;
+    background-color: #c2b280bf;
+    margin-bottom: 3vh;
+}
+
+.tituloPagina-container{
+    display: flex;
+    margin: 2vh auto;
+}
+
+.tituloPagina{
+    margin: auto;
+}
+
+.navPaginas{
+    display: flex;
+    align-items: center;
+    margin: 4vh auto;
+    background-color: #c98872;
+    border-radius: .3rem;
+    padding: 1vh 1vw;
+}
+
+.listaPaginas{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    margin: auto;
+}
+
+.liPagina{
+    list-style: none;
+}
+
+.linkPagina{
+    color: black;
+    font-weight: bold;
+}
+
+.seccionBusquedaNombre{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+}
+
+.subtituloPagina-container{
+    display: flex;
+    align-items: center;
+    background-color: #c98872;
+    padding: 1vh 1vw;
+    border-radius: 0.5rem;
+    margin-bottom: 2vh;
+}
+
+.subtituloPagina{
+    margin: auto;
+}
+
+.nombreMonstruoBusqueda-container{
+    margin: 1vh auto;
+}
+
+.btnBuscarMonstruoNombre-container{
+    display: flex;
+}
+
+.mensaje-container{
+    background-color: #c98872;
+    padding: 1vh 1vw;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    display: flex;
+    margin-bottom: 2vh;
+}
+
+.tarjetaMonstruo-container{
+    /*background-color: #624b05bc;*/
+    border: 4px solid #624b05bc;
+    background-color: #624b054a;
+    padding: 1vh 2vw;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.imagenMonstruo-container{
+    display: flex;
+    margin: 2px auto 20px auto;
+    border: 1px solid #031e7195;
+}
+
+.imagenMonstruo{
+    max-width: 37vw;
+    max-height: 37vh;
+}
+
+.infoMonstruo-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+.infoMonstruo{
+    align-self: baseline;
+    padding-left: 1.4vw;
+}
+
+.musicaMonstruo{
+    margin-top: 2vh;
+    width: 17vw;
+    height: 25vh;
+}
+
+.botonFavoritos{
+    background-color:#92adffc9;
+    padding: 5px 20px;
+    font-weight: bold;
+    margin: auto;
+    border-radius: 0.5rem;
+}
+
+.btnListaCompleta-container{
+    display: flex;
+    align-items: center;
+}
+
+.seleccionTitulo-container{
+    display: flex;
+    align-items: center;
+}
+
+.tituloBotonesErrores-container{
+    display: flex;
+    justify-content: center;
+    margin: 2vh 0px;
+}
+
+.seccionBotonesDeFallo{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    padding: 1vh 2vw;
+    margin: auto;
+}
+
+.botonFallo{
+     background-color:#92adffc9;
+    padding: 5px 20px;
+    font-weight: bold;
+    margin: auto;
+    border-radius: 0.5rem;
+}
+
+.btnBuscarMonstruoNombre{
+    margin: 5px auto 10px auto;
+    background-color:#92adffc9;
+    padding: 1vh 2vw 1.5vh;
+    font-size: larger;
+    font-weight: bold;
+    border-radius: 0.5rem;
+    border: 1px;
+    box-shadow: 1px 1px 2px #0000006b;
+}
+
+
+
+
+
+
+
+.aviso{
+    background-color: rgba(255, 255, 0, 0.5);
+}
+
+.exito{
+    background-color: rgba(6, 255, 6, 0.5);
+}
+
+.error{
+    background-color: rgba(255, 0, 0, 0.5);
+}
+
+
+
+
+
+
+
+
+#mensaje{
+    padding: 1vh 1vw;
+    border-radius: 0.5rem;
+    margin: auto;
+}
+
+#nombreMonstruoBusqueda{
+    padding: 0.5vh 10vw;
+    font-size: medium;
+    border-radius: 0.5rem;
+    box-shadow: 1px 1px 2px #0000009a
+}
+
+#tarjetasMonstruosContainer{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 15px;
+}
+
+#btnListaCompleta{
+    margin: 0px auto 2vh;
+    background-color: #92adffc9;
+    padding: 5px 20px;
+    font-weight: bold;
+    border-radius: 0.5rem;
+}
+
+#seleccionTitulo{
+    margin: 0px auto 2vh;
+    background-color: #92adffc9;
+    font-weight: bold;
+    border-radius: 0.5rem;
+    padding: 5px 20px;
+}
