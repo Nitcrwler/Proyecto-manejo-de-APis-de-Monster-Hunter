@@ -379,7 +379,6 @@ async function ListaCompleta(){
 
 
         // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-        // TODO: Hacer este ciclo una funcion ()
         // let n = 0;
         // let infoMonstruoCompleta = []; // Se crea un arreglo para ser utilizado
         // // Se guarda en el indice indicado por n
@@ -402,7 +401,7 @@ async function ListaCompleta(){
         // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
         // Se crean las tarjetas en la página
         mostrarResultados(juntarInformacionDeNombres(listaMonsters,nombresMonstruos), total => {
-            mostrarMensaje(`Se han encontrado un total de ${total} monstruos`,"aviso");
+            mostrarMensaje(`Se han encontrado un total de ${total} monstruos`,"exito");
         })
         // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
     }
@@ -415,7 +414,7 @@ async function ListaCompleta(){
 
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-// TODO: Función para mostrar los monstruos basado en el título buscado
+// TODO: Función para mostrar los monstruos basado en el título buscado ( X )
 async function BuscarPorTitulo(){
     try{
         // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
@@ -452,7 +451,7 @@ async function BuscarPorTitulo(){
 
 
         mostrarResultados(monstruosPorTitulo, total => {
-            mostrarMensaje(`Se han encontrado un total de ${total} monstruos`,"aviso");
+            mostrarMensaje(`Se han encontrado un total de ${total} monstruos`,"exito");
         })
     }
     catch(error){
@@ -493,6 +492,7 @@ function CrearTarjetas(arreglo){
         // Imagen del monstruo
         let imagenMonstruo = document.createElement("img");
         imagenMonstruo.className = "imagenMonstruo";
+        imagenMonstruo.loading = "lazy";
 
         // Contenedor de la información del monstruo
         let contenedorInfoMonstruo = document.createElement("div");
@@ -500,27 +500,27 @@ function CrearTarjetas(arreglo){
 
         // Nombre en inglés del monstruo
         let nombreEnglishMonstruo = document.createElement("p");
-        nombreEnglishMonstruo.className = "nombreEnglish";
+        nombreEnglishMonstruo.className = "nombreEnglish infoMonstruo";
 
         // Nombre en japones 
         let nombreJapaneseMonstruo = document.createElement("p");
-        nombreJapaneseMonstruo.className = "nombreJapanese";
+        nombreJapaneseMonstruo.className = "nombreJapanese infoMonstruo";
 
         // Categoria del monstruo       TODO: Falta pasar el nombre a español   ()
         let categoriaMonstruo = document.createElement("p");
-        categoriaMonstruo.className = "categoriaMosntruo";
+        categoriaMonstruo.className = "categoriaMosntruo infoMonstruo";
 
         // Elemento principal del monstruo      TODO: Falta pasar el elemento a español ()
         let elementoMonstruo = document.createElement("p");
-        elementoMonstruo.className = "elementoMonstruo";
+        elementoMonstruo.className = "elementoMonstruo infoMonstruo";
 
         // Primer juego de aparicion del monstruo
         let primerJuegoDeAparicion = document.createElement("p");
-        primerJuegoDeAparicion.className = "primerJuego";
+        primerJuegoDeAparicion.className = "primerJuego infoMonstruo";
 
         // Puesto y año del ranking de popularidad
         let rankingPopularidad = document.createElement("p");
-        rankingPopularidad.className = "rankingPopuralidad";
+        rankingPopularidad.className = "rankingPopuralidad infoMonstruo";
 
         // Contenedor del video de musica
         let contenedorMusicaMonstruo = document.createElement("div");
@@ -529,10 +529,12 @@ function CrearTarjetas(arreglo){
         // Musica de batalla del monstruo
         let musicaMonstruo = document.createElement("iframe");
         musicaMonstruo.className = "musicaMonstruo";
+        musicaMonstruo.loading = "lazy";
 
         // Botón de favoritos
         let botonFavorito = document.createElement("button");
         botonFavorito.textContent = "Añadir a favoritos";
+        botonFavorito.className = "botonFavoritos";
         botonFavorito.addEventListener("click",() => {
             guardarFavorito(element.monster_id,false);
         })
@@ -554,15 +556,14 @@ function CrearTarjetas(arreglo){
         rankingPopularidad.textContent = `Ranking: ${element.textoRanking()}`;
 
         //TODO: Variable que va a contener la url de la musica de batalla del monstruo ( X )
-        let url = new URL(element.musica[0].url);
-        let idVideo = url.searchParams.get("v");
-        musicaMonstruo.src = `https://www.youtube.com/embed/${idVideo}?si=ZWBNKpjy_mPzxtn_`;
+        let url = new URL(element.musica[0].url); // Se saca la url del arreglo del monstruo
+        let idVideo = url.searchParams.get("v");    // Se consigue solamente el codigo del video(lo que va despues de watch?v=)
+        musicaMonstruo.src = `https://www.youtube.com/embed/${idVideo}?si=ZWBNKpjy_mPzxtn_`;    // Se carga en la fuente del iframe el codigo
         // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 
 
 
         // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-        // TODO:    Falta armar las tarjetas en el html ( X )
         // Se agregan al HTML las etiquetas con la información para mostrar
         contenedorTarjetas.appendChild(contenedorTarjetaMonstruo);
         contenedorTarjetaMonstruo.appendChild(contenedorImagenMonstruo);
