@@ -8,30 +8,32 @@
 </head>
 <body>
     <header>
-        <h1>Pagina de fallos simulados</h1>
+        <div class="tituloPagina-container">
+            <h1 class="tituloPagina">Pagina de fallos simulados</h1>
+        </div>
         <!-- Barra de navegación para otras páginas -->
-        <nav>
-            <ul>
-                <li>
-                    <a href="/pages/index.html">Búsqueda de monstruo</a>
+        <nav class="navPaginas">
+            <ul class="listaPaginas">
+                <li class="liPagina">
+                    <a href="/pages/index.html" class="linkPagina">Búsqueda de monstruo</a>
                 </li>
-                <li>
-                    <a href="/pages/listaCompleta.html">Lista de monstruos</a>
+                <li class="liPagina">
+                    <a href="/pages/listaCompleta.html" class="linkPagina">Lista de monstruos</a>
                 </li>
-                <li>
-                    <a href="/pages/busquedaTitulo.html">Buscar monstruo por título</a>
+                <li class="liPagina">
+                    <a href="/pages/busquedaTitulo.html" class="linkPagina">Buscar monstruo por título</a>
                 </li>
-                <li>
-                    <a href="">Ranking de popularidad</a>
+                <!-- <li class="liPagina">
+                    <a href="" class="linkPagina">Ranking de popularidad</a>
                 </li>
-                <li>
-                    <a href="">Quiz de tema</a>
+                <li class="liPagina">
+                    <a href="" class="linkPagina">Quiz de tema</a>
                 </li>
-                <li>
-                    <a href="">Página de favoritos</a>
-                </li>
-                <li>
-                    <a href="/pages/fallos.html">Botones de fallo</a>
+                <li class="liPagina">
+                    <a href="" class="linkPagina">Página de favoritos</a>
+                </li> -->
+                <li class="liPagina">
+                    <a href="/pages/fallos.html" class="linkPagina">Botones de fallo</a>
                 </li>
             </ul>
         </nav>
@@ -41,74 +43,77 @@
 
 
     <main>
-        <div class="tituloPagina-container">
-            <h2>Demostración de errores</h2>
+        <div class="subtituloPagina-container">
+            <h2 class="subtituloPagina">Demostración de errores</h2>
         </div>
         <div class="mensaje-container">
                 <p id="mensaje"></p>
         </div>
 
-        <div>
+        <div class="tituloBotonesErrores-container">
             <h3>Errores de Conexión y de Datos</h3>
         </div>
-        <div>
-            <div>
-                <button id="btnFalloApi">
+        <div class="seccionBotonesDeFallo">
+            <div class="botonFallo-container">
+                <button id="btnFalloApi" class="botonFallo">
                     Api no disponible
                 </button>
             </div>
             <div>
-                <button id="btnFalloUrl">
+                <button id="btnFalloUrl" class="botonFallo">
                     URL incorrecta
                 </button>
             </div>
             <div>
-                <button id="btnFalloHttp">
+                <button id="btnFalloHttp" class="botonFallo">
                     Respuesta HTTP no exitosa
                 </button>
             </div>
             <div>
-                <button id="btnFalloRegistro">
+                <button id="btnFalloRegistro" class="botonFallo">
                     Registro inexistente
                 </button>
             </div>
             <div>
-                <button id="btnFalloJson">
+                <button id="btnFalloJson" class="botonFallo">
                     JSON inválido
                 </button>
             </div>
         </div>
 
-
-        <div>
+        <div class="tituloBotonesErrores-container">
             <h3>Errores al guardar y eliminar</h3>
         </div>
-        <div>
+        <div class="seccionBotonesDeFallo">    
             <div>
-                <button id="btnFalloGuardar">
+                <button id="btnFalloGuardar" class="botonFallo">
                     Error al guardar
                 </button>
             </div>
             <div>
-                <button id="btnFalloEliminar">
+                <button id="btnFalloEliminar" class="botonFallo">
                     Error al eliminar
                 </button>
             </div>
         </div>
 
-
-        <div>
+        <div class="tituloBotonesErrores-container">
             <h3>Formulario incompleto y busqueda sin resultados</h3>
         </div>
-        <div>
-            <form id="formBusquedaMosntruo">
-                <input type="text" id="nombreMonstruoBusqueda">
-                <button type="submit">
-                    Buscar
-                </button>
-            </form>
+        <div class="seccionBotonesDeFallo">
+            <div>
+                <form id="formBusquedaMosntruo">
+                    <div class="nombreMonstruoBusqueda-container">
+                        <input type="text" id="nombreMonstruoBusqueda">
+                    </div>
+                    <div class="btnBuscarMonstruoNombre-container">
+                        <button type="submit" class="btnBuscarMonstruoNombre">
+                            Buscar
+                        </button>
+                    </div>
+                </form>
+            </div>
         </div>
-
 
         <div id="tarjetasMonstruosContainer">
 
